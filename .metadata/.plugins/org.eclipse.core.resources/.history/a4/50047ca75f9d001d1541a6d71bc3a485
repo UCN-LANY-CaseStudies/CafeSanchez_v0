@@ -42,6 +42,12 @@ public class CreateOrderDialog extends JDialog {
 		lstOrderlines.setModel(new DefaultListModel<Orderline>());
 	}
 
+//	private void update() {
+//
+////		NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+////		txtTotalPrice.setText(currencyFormatter.format(this.order.getTotalPrice()));
+//	}
+
 	private void addSelectedProductToOrder() {
 
 		Product product = (Product) cboProducts.getSelectedItem();

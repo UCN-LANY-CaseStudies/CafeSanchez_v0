@@ -23,7 +23,7 @@ public class OrderHandlingController {
 		return instance;
 	}
 
-	private OrderHandlingController() { // constructor is private to enforce singleton
+	private OrderHandlingController() { // controller is private to enforce singleton
 
 		// Loading products from file
 		try {
