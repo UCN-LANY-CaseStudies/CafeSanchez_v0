@@ -25,7 +25,7 @@ public class OrderHandlingController {
 
 	private OrderHandlingController() { // constructor is private to enforce singleton
 
-		// Loading products data from file
+		// Loading products from file
 		try {
 			File productsFile = new File("Products.txt");
 			Scanner reader = new Scanner(productsFile);
