@@ -32,13 +32,13 @@ public class OrderHandlingController {
 
 			while (reader.hasNextLine()) {
 				String[] data = reader.nextLine().split(";");
-				
-				products.add(new Product(data[0], Float.parseFloat(data[1])));				
+
+				products.add(new Product(data[0], Float.parseFloat(data[1])));
 			}
 			reader.close();
-			
+
 		} catch (FileNotFoundException e) {
-			
+
 			e.printStackTrace();
 		}
 	}
@@ -47,17 +47,11 @@ public class OrderHandlingController {
 	private List<Product> products = new ArrayList<Product>();
 	private List<Order> orders = new ArrayList<Order>();
 
-	public boolean setOrderStatusToFinished(Order selectedOrder) {
-		
-		selectedOrder.setStatus(Order.STATUS_FINISHED);
-		return true;
-	}
-
-	public List<Order> getActiveOrders() {
+	public List<Order> getUnfinishedOrders() {
 
 		List<Order> result = new ArrayList<Order>();
 		for (Order order : orders) {
-			if (order.getStatus() == Order.STATUS_ACTIVE) {
+			if (order.getStatus() != Order.STATUS_FINISHED) {
 				result.add(order);
 			}
 		}
@@ -65,14 +59,31 @@ public class OrderHandlingController {
 	}
 
 	public boolean createNewOrder(Order order) {
-		order.setStatus(Order.STATUS_ACTIVE);
-		orders.add(order);		
+		order.setStatus(Order.STATUS_NEW);
+		orders.add(order);
 		return true;
 	}
 
-	public List<Product> getAllProducts() {
+	public List<Product> getProducts() {
 
 		return products;
 	}
 
+	public boolean changeOrderState(Order order) {
+
+		switch (order.getStatus()) {
+			case Order.STATUS_NEW:
+				order.setStatus(Order.STATUS_ACTIVE);
+				break;
+			case Order.STATUS_ACTIVE:
+				order.setStatus(Order.STATUS_READY);
+				break;
+			case Order.STATUS_READY:
+				order.setStatus(Order.STATUS_FINISHED);
+				break;
+			default:
+				return false;
+		}
+		return true;
+	}
 }

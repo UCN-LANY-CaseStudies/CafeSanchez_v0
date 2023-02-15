@@ -14,6 +14,7 @@ public class Order {
 	public static final String STATUS_NEW = "New";
 	public static final String STATUS_ACTIVE = "Active";
 	public static final String STATUS_FINISHED = "Finished";
+	public static final String STATUS_READY = "Ready";
 
 	public String getCustomerName() {
 		return customerName;
@@ -57,6 +58,6 @@ public class Order {
 		for (Orderline ol : orderlines) {
 			qty += ol.getQuantity();
 		}
-		return customerName + ": " + qty + " cups";
+		return customerName + ": " + qty + " cups - " + status;
 	}
 }

@@ -38,7 +38,7 @@ public class CreateOrderDialog extends JDialog {
 
 		this.ordersCtrl = ordersCtrl;
 
-		cboProducts.setModel(GuiHelpers.mapToComboBoxModel(ordersCtrl.getAllProducts()));
+		cboProducts.setModel(GuiHelpers.mapToComboBoxModel(ordersCtrl.getProducts()));
 		lstOrderlines.setModel(new DefaultListModel<Orderline>());
 	}
 
