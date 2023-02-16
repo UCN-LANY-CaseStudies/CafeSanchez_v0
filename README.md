@@ -40,6 +40,12 @@ The user interface is designed to satisfy the Use Cases shown in Appendix A and 
 ![Main Window][mainwindow]
 ![New Order Model][newordermodal]
 
+### Business Logic
+To support the use cases, a single controller for handling orders is implemented. This implements methods to fulfill the use cases and is also responsible for holding operation data and load master product data from a file. The master data is loaded once on startup, so the system does not support adding new products runtime, which is also not a requirement. In other words, if new products are added to the assortment, a restart is required. Also, since there is no requirement of keeping records of the sale, all data is stored in memory and will disappear when the system is shut down or restarted. The list for holding the order data is implemented in the OrderHandlingController class as a private property
+
+![Business Layer][businesslayer]
+
 [architecture]: /Graphics/Architecture.svg "Architecture" 
 [mainwindow]: /Graphics/screen1.png "Main Window"
-[newordermodal]: /Graphics/screen2.png "New Order Modal"   
+[newordermodal]: /Graphics/screen2.png "New Order Modal"
+[businesslayer]: /Graphics/business_layer.png "Business Logic Layer"
