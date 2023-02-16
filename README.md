@@ -30,7 +30,16 @@ Based on the information provided above, the following *functional* requirements
 The only *non-functional* requirement identified is that the operation of the system must be fail-safe.
 
 ## Implementation
+The application is implemented as a desktop application based on a three-tier open architecture. The individual tiers are implemented as packages in the Java project (The IDE used is Eclipse).
 
 ![Architecture][architecture]
 
+### UI
+The user interface is designed to satisfy the Use Cases shown in Appendix A and consists of two screens; a main window that shows the active orders that are currently being processed, and a modal window where details about a new customer order can be entered.
+
+![Main Window][mainwindow]
+![New Order Model][newordermodal]
+
 [architecture]: /Graphics/Architecture.svg "Architecture" 
+[mainwindow]: /Graphics/screen1.png "Main Window"
+[newordermodal]: /Graphics/screen2.png "New Order Modal"   
