@@ -21,10 +21,6 @@ public class Orderline {
 		this.item = item;
 	}
 	
-	public float getSubTotal() {
-		return item.getPrice() * quantity;
-	}
-	
 	public Orderline(int quantity, Product item) {
 		super();
 		this.quantity = quantity;

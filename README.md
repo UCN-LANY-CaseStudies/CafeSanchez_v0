@@ -46,7 +46,18 @@ To support the use cases, a single controller for handling orders is implemented
 ![Business Layer][businesslayer]
 
 ### Model
-The domain model represents the data used to operate the system
+The data needed for operating the system is represented by three model classes:
+
+**Product Class**:  
+The Product class represents a type of product that can be purchased in the system. Each product has a name and a price. 
+
+**Order Class**:  
+The Order class represents a customer order for one or more products. Each order has the name of an associated customer, and a timestamp of when the order was placed. It also contains information about the state the order currently have. An Order can have one or more OrderLines associated with it. The total price for the order is calculated by adding the subtotal from all orderlines.
+
+**OrderLine Class**:  
+The OrderLine class represents a single line item in an Order. It associates a product with a quantity that the customer has ordered. An OrderLine has a reference to the Product it represents and the quantity ordered. The subtotal price is calculated by multiplying the quantity by the price of the associated product.
+
+The domain model allows the system to represent the relationship between these three classes. The OrderLine class connects the Product and Order classes and allows for the creation of multiple lines within an order. The Product class provides information about the products available, while the Order class tracks the customer's order and payment details.
 
 ![Domain Model][domainmodel]
 

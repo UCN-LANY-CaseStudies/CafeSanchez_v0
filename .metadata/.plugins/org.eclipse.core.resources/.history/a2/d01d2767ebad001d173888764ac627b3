@@ -47,7 +47,7 @@ public class Order {
 	public float getTotalPrice() {
 		float result = 0;
 		for(Orderline ol : orderlines) {
-			result += ol.getSubTotal();
+			result += ol.get;
 		}
 		return result;
 	}
