@@ -28,3 +28,9 @@ Based on the information provided above, the following *functional* requirements
 1. **Multiple order tracking**: The software should be able to keep track of several orders simultaneously, so the staff can work on multiple orders at the same time.
 
 The only *non-functional* requirement identified is that the operation of the system must be fail-safe.
+
+## Implementation
+
+![Architecture][architecture]
+
+[architecture]: /Graphics/Architecture.svg "Architecture" 
