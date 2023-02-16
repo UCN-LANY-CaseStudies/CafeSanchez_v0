@@ -45,7 +45,15 @@ To support the use cases, a single controller for handling orders is implemented
 
 ![Business Layer][businesslayer]
 
+### Model
+The domain model represents the data used to operate the system
+
+![Domain Model][domainmodel]
+
+
+
 [architecture]: /Graphics/Architecture.svg "Architecture" 
-[mainwindow]: /Graphics/screen1.png "Main Window"
-[newordermodal]: /Graphics/screen2.png "New Order Modal"
+[mainwindow]: /Graphics/screen1.png "Main screen with active orders"
+[newordermodal]: /Graphics/screen2.png "Dialog for creating new orders"
 [businesslayer]: /Graphics/business_layer.png "Business Logic Layer"
+[domainmodel]: /Graphics/model_layer.png "Domain model"
