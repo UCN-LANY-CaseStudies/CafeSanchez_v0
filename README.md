@@ -61,7 +61,14 @@ The domain model allows the system to represent the relationship between these t
 
 ![Domain Model][domainmodel]
 
+### Use Cases
+The following brief use cases are identified:
 
+**Create Order**: A customer arrives at the counter and places an order for one or more beverages. The cashier opens the systems *New Order* screen, asks for the customers name or moniker and enters it into the system and records which beverages are ordered. The system presents the total price for the order. The cashier presses the *Ok* button and the order is displayed on the main screen with status *New*.
+
+**Process Order**: As soon as a new order is entered into the system, it can be processed. The barista selects the order, marks it as active, and starts producing the beverages. The order changes state to *Active* on the screen. When the barista is finished producing the beverages, they are placed on the counter for pickup by the customer. The barista marks the order as ready in the system and state changes to *Ready* on the screen. 
+
+**Finish Order**: When the cashier sees an order has changed to the *Ready* state, he calls out the customer name/moniker that is connected to the order and the customer approaches the counter, settles the payment, and leaves the cafe with the ordered beverages. The cashier marks the order as *Finished* and it disappears from the screen.
 
 [architecture]: /Graphics/Architecture.svg "Architecture" 
 [mainwindow]: /Graphics/screen1.png "Main screen with active orders"
