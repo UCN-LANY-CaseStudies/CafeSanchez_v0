@@ -16,3 +16,11 @@ Through meetings with the café owner, the following additional information abou
 * The system must be able to keep track of several orders simultaneously but does not keep records of the sales. 
 * When an order is finished and paid for, it is deleted from the system. 
 * Also, there is no need for handling payments.
+
+## Requirements
+Based on the information provided above, the following functional requirements has been identified:  
+1. **Order creation**: The software should allow the staff to create a new order, specifying the name of the customer, the beverages ordered, and any special instructions or preferences.
+1. **Order processing**: Once an order is created, the software should allow the staff to process it, which may involve tracking its progress, and updating its status as it moves through the workflow.
+1. **Order tracking**: The software should allow the staff to track the status of each order in real-time, so they can see which orders are in progress, which are ready to be picked up, and which are still waiting to be processed.
+1. **Order deletion**: When an order is finished and paid for, the software should allow the staff to remove it from the system.
+1. **Multiple order tracking**: The software should be able to keep track of several orders simultaneously, so the staff can work on multiple orders at the same time.
