@@ -1,5 +1,7 @@
 # Cafe Sanchez Case Study
  This repository contains the first version of the point-of-sale application that is the starting point for the Cafe Sanchez case study.  
+
+The project is written in Java and the IDE used is Eclipse.
  
  ## Introduction
  
@@ -39,7 +41,7 @@ The following brief use cases are identified:
 **Finish Order**: When the cashier sees an order has changed to the *Ready* state, he calls out the customer name/moniker that is connected to the order and the customer approaches the counter, settles the payment, and leaves the cafe with the ordered beverages. The cashier marks the order as *Finished* and it disappears from the screen.
 
 ## Implementation
-The application is implemented as a desktop application based on a three-tier open architecture. The individual tiers are implemented as packages in the Java project (The IDE used is Eclipse).
+The application is implemented as a desktop application based on a three-tier open architecture. The individual tiers are implemented as packages in the Java project.
 
 ![Architecture][architecture]
 
