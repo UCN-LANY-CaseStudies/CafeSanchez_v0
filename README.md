@@ -1,7 +1,7 @@
 # Cafe Sanchez Case Study
  This repository contains the first version of the point-of-sale application that is the starting point for the Cafe Sanchez case study.  
 
-The project is written in Java and the IDE used is Eclipse.
+This project is written in Java and the IDE used is Eclipse. Language and IDE may change in later iterations.
  
  ## Introduction
  
